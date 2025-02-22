@@ -4,7 +4,9 @@ import { RGBELoader, ThreeMFLoader } from 'three/examples/jsm/Addons.js';
 let [width, height] = [window.innerWidth, window.innerHeight];
 const canvas = document.getElementById('canvas');
 
+// scene
 const scene = new THREE.Scene();
+// camera
 const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
 camera.position.z = 4;
 
@@ -15,6 +17,7 @@ rgbe.load('Static/country_club_1k.hdr', (environment) => {
   scene.environment = environment;
 });
 
+// renderer
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setSize(width, height);
 
