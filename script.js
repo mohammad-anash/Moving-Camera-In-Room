@@ -44,3 +44,5 @@ const tick = () => {
 };
 
 tick();
+
+console.log('update something');
